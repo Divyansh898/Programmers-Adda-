@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Become_Member";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+}
+
+<form action="/Home/Become_Member" method="post" enctype="multipart/form-data">
+<div class="row">
+    <div class="col-sm-2"></div>
+     <div class="col-sm-8" style="min-height:500px;margin-top:10px;
+border:4px solid #0f68a9;background:linear-gradient(pink,skyblue);border-radius:10px;">
+         <div class="row" style="background:#0f68a9;color:white;font-size:40px;
+               text-align:center;font-family:'Imprint MT Shadow'">Become Member </div>
+         <br />
+         <center><span class="fa fa-user" style="font-size:90px;padding:20px;
+             background:#0f68a9;border-radius:50%;color:white"></span></center>  <br />
+         <div class="row">
+             <div class="col-sm-6">
+          <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Name </span><br />
+         <input type="text" name="name" class="form-control"
+              placeholder="Enter Name" required="required"/><br />
+                 </div>
+             <div class="col-sm-6">
+          <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Email Address</span> <br />
+         <input type="email" name="email" class="form-control"
+              placeholder="Enter Email Address" required="required"/><br />
+             </div>
+             </div>
+         <div class="row">
+             <div class="col-sm-6">
+           <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Qualification</span><br />
+                 <select class="form-control" name="quailification" required="required">
+              <option>Select Qualification</option>
+              <option>Diploma</option>
+              <option>B.tech</option>
+              <option>BCA</option>
+              <option>BSC</option>
+              <option>M.tech</option>
+              <option>MCA</option>
+              <option>MSC</option>
+              <option>Phd</option>
+          </select>
+             </div>
+          <div class="col-sm-6">
+               <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Mobile Number</span> <br />
+         <input type="number" name="mob" class="form-control"
+             placeholder="Enter Mobile Number " required="required" /><br />
+             </div>
+             </div>
+         <div class="row">
+             <div class="col-sm-6">
+          <span style="font-family:'Imprint MT Shadow';font-size:15px;">Profile </span><br />
+         <input type="file" name="pic" class="form-control"
+              required="required"/><br />
+                 </div>
+             <div class="col-sm-6">
+          <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Password </span><br />
+         <input type="password" name="passwd" class="form-control"
+              placeholder="Enter Password" required="required" /><br />
+             </div>
+             </div>
+            <div class="row">
+             <div class="col-sm-6">
+                  <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Gender</span>
+                 <input type="radio" name="gender" checked="true" value="Male"/>  <span style="font-family:'Imprint MT Shadow';font-size:15px;">Male</span>
+                      <input type="radio" name="gender" value="Female"/>  <span style="font-family:'Imprint MT Shadow';font-size:15px;">Female</span>
+             </div>
+          <div class="col-sm-6">
+               <span style="font-family:'Imprint MT Shadow';font-size:15px;">Address</span> <br />
+         <input type="text" name="addr"  class="form-control"
+             placeholder="Enter Address" required="required"/> 
+             </div>
+             </div>
+       
+         <input type="submit" value="Register Now" class="btn btn-danger" style="border-radius:20px;margin-left:100px"/>
+         <br /><br />
+
+     </div>
+     <div class="col-sm-2"></div>
+</div>
+<br /><br />
+    </form>

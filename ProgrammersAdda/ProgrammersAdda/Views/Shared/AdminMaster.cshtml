@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/hover-min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <style>
+    #myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+ background:brown;
+}
+        body {
+        overflow-x:hidden;
+        }
+        </style>
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-2">
+              <div class="row">
+                  <img src="~/Content/Images/logo1.png" height="100px" width="100%"/>
+              </div>
+          </div>
+          <div class="col-sm-10" style="min-height:100px;background:linear-gradient(Darkorange,red,brown);text-shadow:2px 2px 2px black;
+             text-align:center;font-size:65px;font-weight:bold;
+             padding-top:10px;font-family:'Palatino Linotype';color:white;">Welcome to AdminZone</div>
+      </div>
+           <div class="row">
+          <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     
+      <ul class="nav navbar-nav navbar-right">
+        
+            <li><a href="/Admin/ChangePassword" >    <img src="~/Content/Images/chh.png"  height="30px" width="30px" style="margin-left:-2px;"/> </a>
+                
+            </li>
+           <li><a href="/Admin/Logout" class="fa fa-sign-out" style="font-size:40px;padding-left:4px;"></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        </div>
+        <div class="row">
+             <div class="col-sm-2" >
+ <img src="~/Content/Images/line.png" height="30px" width="50px" data-toggle="collapse" data-target="#demo" style="margin-top:0px;"/>
+  
+  <div id="demo" class="collapse">
+  
+                    <div class="btn btn-danger" ">
+                        <ul id="myMenu" style="margin-top:30px;">
+        <li><a href="/Admin/Index" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Dashboard</a></li>
+         <li><a href="/Admin/MembersMgmt" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Members Management</a></li>
+            <li><a href="/Admin/EnquiryMgmt"class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Enquiry Management</a></li>
+            <li><a href="/Admin/ReviewMgmt" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Review Management</a></li>
+            <li><a href="/Admin/AddProgrammer" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Add Programmer</a></li>
+            <li><a href="/Admin/ProgrammerMgmt" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Programmers Management</a></li>
+            <li><a href="/Admin/ChangePassword" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Change Password</a></li>
+           <li><a href="/Admin/Logout" class="btn btn-danger" style="color:white;font-size:20px;font-weight: bold;">Logout</a></li>
+      </ul>
+                        
+  
+    
+  </div>
+                   
+                    
+                </div>
+</div>
+            <div class="col-sm-10" style="min-height: 500px;">
+            @RenderBody()
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="min-height:60px;background:black;text-align:center;
+                   font-size:25px;color:white;">
+               Copyright &copy; Mecatredz Technology Developed & Designed By Er. Divyansh
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

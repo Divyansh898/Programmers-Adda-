@@ -1,0 +1,52 @@
+﻿@model List<ProgrammersAdda.Models.Enquiry>
+@{
+    ViewBag.Title = "EnquiryMgmt";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-11">
+        <h2 style="text-align:center;font-family:'Imprint MT Shadow';color:#ec1a09;font-weight:bold;">EnquiryMgmt</h2>
+<table class="table table-responsive table table-bordered" border="3px solid black" style="background:linear-gradient(Darkorange,red,brown);color:white;">
+
+    <tr>
+        <th>EID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Message</th>
+        <th>Enquiry Date</th>
+        <th>Delete</th>
+    </tr>
+   @{
+       foreach(var x in Model)
+       {
+       <tr>
+           <td>@x.eid</td>
+           <td>@x.name</td>
+           <td>@x.email</td>
+           <td>@x.mob</td>
+           <td>@x.msg</td>
+           <td>@x.edt</td>
+           <td><a href="#"><span class="fa fa-trash"></span></a></td>
+       </tr>
+       }
+       }
+</table>
+
+</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

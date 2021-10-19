@@ -1,0 +1,127 @@
+﻿@model  List<ProgrammersAdda.Models.UploadError>
+
+@{
+    ViewBag.Title = "Discusion_Form";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+}
+<script src="~/Content/js/jquery.js"></script>
+<script>
+    
+    $(document).ready(function () {
+        $(".s").click(function () {
+            var t = $(this).text();
+            var txt = $("#"+t).val()
+            var obj = { comment: txt, status: t };
+            $.getJSON("/Home/myData", obj, function (data) {
+                if (data == "done") {
+                    alert("Thanks for comment");
+                    $("#" + t).val("")
+                }
+                else {
+                    alert("Your comment is not uploaded");
+                }
+
+         
+
+
+
+          })        
+        })
+        //display comments here ....
+        $(".scomment").click(function () {
+            var txt = "";
+            var sn = $(this).html();
+            $.getJSON("/Home/displayData", { status: sn }, function (data) {
+            for (var i = 0; i < data.length; i++)
+            {
+                    txt += "<span class='fa fa-user' style='font-size:20px'></span>"+data[i].comments+"<br/>";
+                    $("#d_" + data[i].status).html(txt);         
+            }
+        })
+        })
+    })
+</script>
+
+<style>
+    .display-field {
+    font-weight:bold;
+    color:black;
+    font-size:22px;
+    font-family:'Palatino Linotype'
+    }
+    .display-label {
+    font-weight:bold;
+    color:red;
+    font-size:22px;
+    font-family:'Palatino Linotype'
+    }
+</style>
+
+@{
+    
+    foreach(var m in Model)
+    {
+     
+<fieldset style="border:4px solid red;padding:20px;margin-top:20px">
+    <legend style="text-align:center;font-family:'Palatino Linotype';font-size:30px;font-weight:bold;color:red;">   Uploaded Queries</legend>
+   
+<div class="row">
+ <div class="col-sm-6">
+     <div class="row">
+    <div class="display-label col-sm-3">
+       Name :-
+    </div>
+    <div class="display-field col-sm-9">
+        @m.name<script src="~/Content/js/jquery.js"></script>
+    </div>
+         <div class="row">
+          <div class="display-label col-sm-3">
+        Upload Date:-
+    </div>
+    <div class="display-field col-sm-9">
+        @m.udt
+    </div>
+             </div>
+</div>
+    <div class="display-label">
+        Query Screen Shot
+    </div>
+    <div class="display-field">
+       <img src="../Content/Errors/@m.ufile" height="250px" width="500px" />
+    </div>
+
+    <div class="display-label">
+       Description
+    </div>
+    <div class="display-field">
+       @m.comments
+    </div>
+
+   
+
+</div>
+      <div class="col-sm-6">      
+        <span class="fa fa-comments scomment" style="font-size:30px;
+                 color:#0094ff;cursor:pointer">@m.fid</span>
+         <br />
+         <div  class="col-sm-12 dsd" style="min-height:90px;border:2px solid #0094ff;
+               padding:15px">
+             <input type="text" name="txtcomment" class="txt" id="@m.fid" style="height:50px;width:70%;padding:5px"
+                 placeholder="Type Comment here..." required="required" />
+             <span class="fa fa-send-o s"   style="font-size:30px;background:#0094ff;
+                color:white;padding:15px;cursor:pointer" title="Click here to send">@m.fid</span>
+         </div>
+          <div class="row">
+              <div id="d_@m.fid" class="col-sm-12" style="min-height:300px;margin-top:10px;
+                        border:1px solid #0094ff">
+
+              </div>
+          </div>
+     </div>
+ </div>
+    </fieldset>
+
+    
+}
+}
+

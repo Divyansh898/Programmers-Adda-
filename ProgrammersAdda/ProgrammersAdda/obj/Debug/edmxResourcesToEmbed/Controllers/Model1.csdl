@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pddbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="pddbEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Enquiries" EntityType="pddbModel.Enquiry" />
+    <EntitySet Name="Logins" EntityType="pddbModel.Login" />
+    <EntitySet Name="Registrations" EntityType="pddbModel.Registration" />
+    <EntitySet Name="Reviews" EntityType="pddbModel.Review" />
+  </EntityContainer>
+  <EntityType Name="Enquiry">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="120" Unicode="false" FixedLength="false" />
+    <Property Name="mob" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="msg" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="edt" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+    <Property Name="passwd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gender" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+    <Property Name="mob" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="quailification" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="profile" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="passwd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="addr" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="regdt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="rid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="rating" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rdt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

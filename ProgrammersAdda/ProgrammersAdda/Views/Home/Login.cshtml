@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+}
+<form action="/Home/Login" method="post">
+<div class="row">
+    <div class="col-sm-4"></div>
+     <div class="col-sm-4" style="min-height:400px;margin-top:20px;
+border:4px solid #0f68a9;background:linear-gradient(#49a1e1,pink,skyblue);border-radius:10px">
+         <div class="row" style="background:#0f68a9;color:white;font-size:40px;
+               text-align:center;font-family:'Imprint MT Shadow';">Login Here </div>
+         <br />
+       <center><span class="fa fa-user" style="font-size:90px;padding:20px;
+             background:#0f68a9;border-radius:50%;color:white"></span></center>  
+         <br /><br />
+        <span style="font-family:'Imprint MT Shadow';font-size:15px;"> User Id </span><br />
+         <input type="email" name="userid" class="form-control"
+              placeholder="Enter UserId" required="required"/><br />
+        <span style="font-family:'Imprint MT Shadow';font-size:15px;"> Password </span><br />
+         <input type="password" name="passwd" class="form-control"
+              placeholder="Enter Password" required="required" /><br />
+       
+          <center>
+         <input type="submit" value="Login Now" class="btn btn-danger" style="border-radius:20px;" /></center>
+         <br /><br />
+
+     </div>
+     <div class="col-sm-4"></div>
+</div>
+<br /><br />
+    </form>
+

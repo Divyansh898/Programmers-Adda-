@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "AddProgrammer";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<form action="/Admin/AddProgrammer" method="post">
+ <div class="row" style="margin-top:10px" >
+     <div class="col-sm-3"></div>
+     <div class="col-sm-6" style="background:linear-gradient(Darkorange,red,brown)">
+       <center> 
+           <span class="fa fa-user" style="font-size:70px;margin-top:20px;background:white;border-radius:50%;padding:20px;"></span><br />
+            <span style="text-align:center;font-size:30px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black"> Add Programmer</span></center><br />
+         <div class="row">
+             <div class="col-sm-6">
+                 <span style="text-align:center;font-size:20px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black">   Name</span><br />
+         <input type="text" required="required" name="name" class="form-control" placeholder="Enter Name"/><br />
+             </div>
+             <div class="col-sm-6">
+                 <span style="text-align:center;font-size:20px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black">   Mobile no.</span><br />
+         <input type="number" required="required" name="mob" class="form-control" placeholder="Enter Mobile No."/><br />
+             </div>
+         </div>
+       
+      <div class="row">
+             <div class="col-sm-6">
+                 <span style="text-align:center;font-size:20px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black"> Email</span><br />
+         <input type="email" required="required" name="email" class="form-control" placeholder="Enter Email"/><br />
+             </div>
+             <div class="col-sm-6">
+                 <span style="text-align:center;font-size:20px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black">   Expert Area</span><br />
+         <input type="text" required="required" name="ExpertArea" class="form-control" placeholder="Enter Expert Area"/><br />
+             </div>
+         </div>
+          <div class="row">
+             <div class="col-sm-6">
+                 <span style="text-align:center;font-size:20px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black">   Qualification</span><br />
+        <select class="form-control" name="qua">
+              <option>Select Qualification</option>
+              <option>Diploma</option>
+              <option>B.tech</option>
+              <option>BCA</option>
+              <option>BSC</option>
+              <option>M.tech</option>
+              <option>MCA</option>
+              <option>MSC</option>
+              <option>Phd</option>
+          </select><br />
+             </div>
+             <div class="col-sm-6">
+                 <span style="text-align:center;font-size:20px;color:white;font-family:'Palatino Linotype';text-shadow:2px,2px,2px black">   Experiance</span><br />
+         <input type="text" required="required" name="exp" class="form-control" placeholder="Enter Experiance"/><br />
+             </div>
+         </div><br />
+        <center><input type="submit" value="Add Programmer" class="btn btn-success" style="font-family:'Palatino Linotype';font-weight:bold;"/><br /></center> <br />
+     </div>
+     <div class="col-sm-3"></div>
+    
+ </div><br /><br />
+</form>

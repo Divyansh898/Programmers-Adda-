@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+          <title>Programmers ADDA</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/hover-min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <style>
+        .d1 {
+        height:80px;
+        width:80px;
+        background:white;
+        margin-top:8px;
+        margin-left:10px;
+        float:left;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2" style="min-height:100px;">
+                <img src="~/Content/Images/logo1.png" height="100px" width="100%"
+                     />
+            </div>
+            <div class="col-sm-10" style="min-height:100px;background:#007acc;
+                  font-size:52px;text-align:center;color:white;font-weight:bold;
+                  text-shadow:2px 2px 2px red;font-family:'Palatino Linotype'">
+                PROGRAMMER'S ADDA
+            </div>
+        </div>
+        <div class="row">
+          <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Programming Problem Solving Solution</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Home/Index">Home</a></li>
+         <li><a href="/Home/About_US">About Us</a></li>
+            <li><a href="/Home/Become_Member">Become Member</a></li>
+          <li><a href="/Home/UploadQuery">Upload Query</a></li>
+            <li><a href="/Home/Discusion_Form">Discussion Form</a></li>
+            <li><a href="/Home/Enquiry">Enquiry</a></li>
+            <li><a href="/Home/Review">Review</a></li>
+            <li><a href="/Home/Login">Login</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        </div>
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <!--------------start footer 1--------------->
+<div class="row" style="background:#007acc;min-height:300px;color:white;font-size:16px;">
+    <div class="col-sm-3">
+        <h2 style="font-family:'Imprint MT Shadow'">About Programming</h2>
+        <br />
+        <p style="text-align:justify;text-justify:auto;">Programming is the process of designing and building an executable computer program for accomplishing a specific computing result. Programming involves tasks such as; analysis, generating algorithms, profiling algorithms' accuracy and resource consumption, and the implementation of algorithms in a chosen programming language (commonly referred to as coding).</p>
+    </div>
+    <div class="col-sm-3">
+        <h2 style="font-family:'Imprint MT Shadow'">Contact US</h2>
+        <br />
+        <span class="fa fa-phone"></span>&nbsp;&nbsp;&nbsp;+91 8953422402<br>
+        <span class="fa fa-envelope"></span>&nbsp;&nbsp;&nbsp;mtechnology@gmail.com<br />
+        <span class="fa fa-fax"></span>&nbsp;&nbsp;&nbsp;C-133 Sector-A, Mahanagar Near Civil Hospital kapoorthala to Gole Market Road Lucknow (226006)
+    </div>
+    <div class="col-sm-3">
+        <h2 style="font-family:'Imprint MT Shadow'">Our Team</h2>
+        <br />
+        
+           <div class="d1 hvr hvr-pop"><img src="~/Content/Images/d.jpg" height="80px" width="100%" /></div>
+           <div class="d1 hvr hvr-pulse"> <img src="~/Content/Images/s.jpg" height="80px" width="100%"/></div>
+           <div class="d1 hvr hvr-buzz"> <img src="~/Content/Images/sand.jpg" height="80px" width="100%"/> </div>
+      <div class="d1 hvr hvr-buzz">  <img src="~/Content/Images/sssss.png" height="80px" width="100%" /></div>
+         <div class="d1 hvr hvr-buzz">  <img src="~/Content/Images/pspsp.png" height="80px" width="100%" /></div>
+    </div>
+    <div class="col-sm-3">
+        <h2 style="font-family:'Imprint MT Shadow'">Our Location</h2>
+        <br />
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1530182114852!2d80.9548188149969!3d26.866879083147445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfdd563c25cbf%3A0xbcefbb4f300d416c!2sMecatredz%20Technology%20Pvt%20Ltd%20Lucknow!5e0!3m2!1sen!2sin!4v1579602531601!5m2!1sen!2sin" width="100%" height="250px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+</div>
+       <!--------------start footer 2--------------->
+        <div class="row">
+            <div class="col-sm-12" style="min-height:60px;background:#e0d6d6;
+            color:black;font-size:25px;text-align:center;padding-top:10px;font-family:'Imprint MT Shadow';">
+                Copyright &copy; Mecatredz Technology Pvt.Ltd. Lucknow Developed
+                 & Designed By Er. Divyansh
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

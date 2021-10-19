@@ -1,0 +1,55 @@
+﻿@model List<ProgrammersAdda.Models.Review>
+
+@{
+    ViewBag.Title = "ReviewMgmt";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-11">
+        <h2 style="text-align:center;font-family:'Imprint MT Shadow';color:#ec1a09;font-weight:bold;">ReviewMgmt</h2>
+<table class="table table-responsive table table-bordered" border="3px solid black" style="background:linear-gradient(Darkorange,red,brown);color:white;">
+    <tr>
+        <th>
+            RID
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+           Email Address
+        </th>
+        <th>
+           Rating
+        </th>
+        <th>
+           Review Date
+        </th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.rid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rdt)
+        </td>
+       
+    </tr>
+}
+
+</table>
+</div>
+    </div>
